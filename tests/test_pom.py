@@ -4,7 +4,7 @@ from pages.home_page import HomePage
 from base.base_test import BaseTest
 
 config = configparser.ConfigParser()
-config.read('settings.ini')
+config.read('../tests/settings.ini')
 
 
 class TestPom(BaseTest):
