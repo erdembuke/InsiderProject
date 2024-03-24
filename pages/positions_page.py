@@ -44,7 +44,7 @@ class PositionsPage(BasePage):
         # ilgili sonuç 4 adet çıkmaktadır
         # element sayısı kadar dönüp hepsi quality assurance iceriyorsa true donduren method
         # duplicate oldugunu fark ettim ama clean code'a nasil cevirecegime dair bir yontem dusunemedim
-        elements = self.driver.find_elements(*self.filter_location)
+        elements = self.driver.find_elements(*self.result_locations)
         element_count = len(elements)
         job_locations = []
         completed = False
@@ -54,8 +54,9 @@ class PositionsPage(BasePage):
             element = self.driver.find_elements(*self.result_locations)[i]
             job_locations.append(element.text)
 
+        # prints the locations
         for i in range(element_count):
-            print(job_locations)
+            print(job_locations[i])
 
         for i in range(element_count):
             if job_locations[i] == 'Istanbul, Turkey':
@@ -78,6 +79,9 @@ class PositionsPage(BasePage):
         for i in range(element_count):
             element = self.driver.find_elements(*self.result_departments)[i]
             department_names.append(element.text)
+
+        for i in range(element_count):
+            print(department_names[i])
 
         for i in range(element_count):
             if department_names[i] == 'Quality Assurance':
