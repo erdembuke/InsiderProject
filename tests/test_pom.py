@@ -8,7 +8,7 @@ config.read('../tests/settings.ini')
 
 
 class TestPom(BaseTest):
-    driver = config.get('WebDriverSettings', 'browser').lower()
+    driver = config.get('WebDriverSettings', 'browser')
 
     def test_pom(self):
         try:
