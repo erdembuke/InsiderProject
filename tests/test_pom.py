@@ -1,9 +1,5 @@
 import configparser
 import time
-import sys
-sys.path.append('../pages')
-sys.path.append('../base')
-
 from pages.home_page import HomePage
 from base.base_test import BaseTest
 

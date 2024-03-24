@@ -55,6 +55,9 @@ class PositionsPage(BasePage):
             job_locations.append(element.text)
 
         for i in range(element_count):
+            print(job_locations)
+
+        for i in range(element_count):
             if job_locations[i] == 'Istanbul, Turkey':
                 count += 1
 
